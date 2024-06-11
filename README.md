@@ -1,1 +1,11 @@
 # running_first_sim
+
+In this directory all the necessary files are present to run a small COLA simulation with FML. The user needs only to set the correct paths in the files. There are 3 paths the user will need to have ready. One is the path to the parent directory of the running_first_sim repository, for which there is the placeholder <root> appearing in the files. The second is the path to the parent directory of the FML repository, for which there is a placeholder <FML_path>. The third is the path to the parent directory of the miniconda folder (assuming this is how the user installed the cola environment), for which there is the placeholder <miniconda_path>.
+
+Here are all the places that require editing:
+
+1. The transferinfo.txt file in the first line will need <root> replaced by the path to the parent directory of the running_first_sim repository. This will tell FML where to find the transfer function files.
+
+2. The parameter_file.lua will require 2 lines edited: <root> must be similarly replaced in the settings "ic_input_filename" and "output_folder" (lines 16 and 18 respectively, 1-indexed). This will tell FMl where to find the transfer info file, and where to output the power spectra respectively.
+
+3. The 1x32_96.sh file is configured for running on the SeaWulf cluster on the nodes with 96 Intel Sapphire Rapids cores (the queue is hbm-short-96core). Others may adapt to their respective clusters. Aside from that there are 4 paths that must be edited: the "output" and "error" paths (lines 5 and 6) must have <root> replaced as in the previous steps, and the same for the "param_file" variable (line 11). Next, in the "colasolver" variable (line 10) the user must replace the <FML_path> with the path to the parent directory of where FML is installed. Note that parameter_file.lua is configured to run with the version of FML here: https://github.com/SBU-COLA-2024/FML . Should one use a different version of FML they will need to modify the lua file to account for the different settings necessary in different versions of FML. Finally, in line 14 one must substitute <miniconda_path> with the path to the parent directory of their miniconda folder.
