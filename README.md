@@ -10,7 +10,7 @@ Here are all the places that require editing:
 
 3. The 1x32_96.sh file is configured for running on the SeaWulf cluster on the nodes with 96 Intel Sapphire Rapids cores (the queue is hbm-short-96core). Others may adapt to their respective clusters. Aside from that there are 5 paths that must be edited: the "output" and "error" paths (lines 5 and 6) must have <root_path> replaced as in the previous steps, and the same for the "param_file" variable (line 11). This will tell slurm where to store the output and error files regarding the job itself, and what file FML will run. Next, in the "colasolver" variable (line 10) the user must replace the <FML_path> with the path to the parent directory of where FML is installed. This will tell slurm where the COLA solver inside FML is installed. Note that parameter_file.lua is configured to run with the version of FML here: https://github.com/SBU-COLA-2024/FML . Should one use a different version of FML they will need to modify the lua file to account for the different settings necessary in different versions of FML. Finally, in line 14 one must substitute <miniconda_path> with the path to the parent directory of their miniconda folder. This directory is where miniconda is installed, assuming the user installed the cola environment using miniconda.
 
-Once these paths are all set one should be able to submit the simulation using "sbatch" followed by the path to the the 1x32_96.sh file:
+Once these paths are all set one should be able to submit the simulation. Make sure the "cola" environment is activated before submitting (and that slurm is loaded if using SeaWulf). Then simply use the "sbatch" command followed by the path to the the 1x32_96.sh file:
 
 sbatch <root_path>/1x32.sh
 
