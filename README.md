@@ -1,6 +1,6 @@
 # running_first_sim
 
-In this directory all the necessary files are present to run a small COLA simulation with FML. The user needs only to set the correct paths in the files. There are 3 paths the user will need to have ready. One is the path to the parent directory of the running_first_sim repository, for which there is the placeholder "<root>" appearing in the files. The second is the path to the parent directory of the FML repository, for which there is a placeholder <FML_path>. The third is the path to the parent directory of the miniconda folder (assuming this is how the user installed the cola environment), for which there is the placeholder <miniconda_path>.
+In this directory all the necessary files are present to run a small COLA simulation with FML. The user needs only to set the correct paths in the files. There are 3 paths the user will need to have ready. One is the path to the parent directory of the running_first_sim repository, for which there is the placeholder <root_path> appearing in the files. The second is the path to the parent directory of the FML repository, for which there is a placeholder <FML_path>. The third is the path to the parent directory of the miniconda folder (assuming this is how the user installed the cola environment), for which there is the placeholder <miniconda_path>.
 
 Here are all the places that require editing:
 
