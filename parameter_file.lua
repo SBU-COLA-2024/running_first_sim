@@ -13,9 +13,9 @@ pofk_nmesh = 256
 ic_fix_amplitude = true
 ic_reverse_phases = false
 ic_type_of_input = "transferinfofile"
-ic_input_filename = "<root>/running_first_sim/transferinfo.txt"
+ic_input_filename = "<root_path>/running_first_sim/transferinfo.txt"
 
-output_folder = "<root>/running_first_sim/output/"
+output_folder = "<root_path>/running_first_sim/output/"
 simulation_name = "test_run"
 simulation_boxsize = 256
 

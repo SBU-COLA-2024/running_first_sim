@@ -1,4 +1,4 @@
-<root>/running_first_sim/transfer_functions/ 54
+<root_path>/running_first_sim/transfer_functions/ 54
 data_transfer_z0.000.dat  0.0
 data_transfer_z0.020.dat  0.02
 data_transfer_z0.041.dat  0.041
